@@ -29,6 +29,50 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+
+  <style>
+    .info-box {
+        text-align: center;
+        background: #fff;
+        padding: 30px 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        height: 100%;
+    }
+    
+    .info-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .info-box i {
+        font-size: 36px;
+        color: #1977cc;
+        margin-bottom: 20px;
+    }
+    
+    .info-box h3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #2c4964;
+    }
+    
+    .info-box p {
+        color: #555;
+        margin-bottom: 0;
+        line-height: 1.6;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+        .info-box {
+            padding: 25px 15px;
+        }
+    }
+</style>
+
 </head>
 
 <body>
@@ -389,29 +433,30 @@
           </div>
 
           <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-12" data-aos="fade-up" data-aos-delay="100">
-              <div class="info-box">
-                <i class="bx bx-map"></i>
-                <h3>Our Address</h3>
-                <p>GROUND FLOOR, KH.NO.271, PRAHALAD VIHAR VILLAGE, STREET NO 1 BLK-C, NEAR BABA, PRAHALADPUR BANGAR
-                  CITY, New Delhi, North Delhi, Delhi, Delhi, India, Delhi</p>
-              </div>
+            <div class="col-lg-4 col-md-12 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="info-box">
+                    <i class='bx bx-map'></i>
+                    <h3>Our Address</h3>
+                    <p>GROUND FLOOR, KH.NO.271, PRAHALAD VIHAR VILLAGE, STREET NO 1 BLK-C, NEAR BABA, PRAHALADPUR BANGAR CITY, New Delhi, North Delhi, Delhi, Delhi, India, Delhi</p>
+                </div>
             </div>
-            <div class="col-lg-4 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
-              <div class="info-box">
-                <i class="bx bx-envelope"></i>
-                <h3>Email Us</h3>
-                <p>aaryafun22@gmail.com</p>
-              </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="info-box">
+                    <i class='bx bx-envelope'></i>
+                    <h3>Email Us</h3>
+                    <p>aaryafun22@gmail.com</p>
+                </div>
             </div>
-            <div class="col-lg-4 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-              <div class="info-box">
-                <i class="bx bx-phone-call"></i>
-                <h3>Call Us</h3>
-                <p>+91 80057 62675</p>
-              </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="info-box">
+                    <i class='bx bx-phone-call'></i>
+                    <h3>Call Us</h3>
+                    <p>+91 80057 62675</p>
+                </div>
             </div>
-          </div>
+        </div>
 
           <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4" data-aos="fade-up"
             data-aos-delay="400">
