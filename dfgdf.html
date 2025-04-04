@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Reels Gallery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        .reels-section {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 700;
+            color: #212529;
+        }
+        
+        .reel-container {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px;
+            aspect-ratio: 9/16;
+        }
+        
+        .reel-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .reel-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .reel-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            padding: 20px;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 100%;
+        }
+        
+        .reel-container:hover .reel-overlay {
+            opacity: 1;
+        }
+        
+        .reel-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .reel-description {
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .reel-stats {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .reel-stat {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+        }
+        
+        .reel-stat i {
+            margin-right: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .reel-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .reel-action-btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .reel-action-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.1);
+        }
+        
+        .reel-action-btn i {
+            font-size: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .reels-section {
+                padding: 40px 0;
+            }
+            
+            .section-title {
+                margin-bottom: 30px;
+                font-size: 1.8rem;
+            }
+            
+            .reel-container {
+                margin-bottom: 20px;
+            }
+            
+            .reel-overlay {
+                opacity: 1;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="reels-section">
+        <div class="container">
+            <h2 class="section-title">Explore Our Products</h2>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="reel-container">
+                        <video src="https://www.frendzappliances.in/images/reels/reel%20(1).mp4" loop muted autoplay playsinline></video>
+                        <div class="reel-overlay">
+                            <h5 class="reel-title">Premium Blender</h5>
+                            <p class="reel-description">High-performance blending for your kitchen</p>
+                            
+                            <div class="reel-stats">
+                                <div class="reel-stat">
+                                    <i class="fas fa-eye"></i>
+                                    <span>24.5K</span>
+                                </div>
+                                <div class="reel-stat">
+                                    <i class="fas fa-heart"></i>
+                                    <span>1.2K</span>
+                                </div>
+                            </div>
+                            
+                            <div class="reel-actions">
+                                <button class="reel-action-btn" title="Like">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="reel-action-btn" title="Share">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                                <button class="reel-action-btn" title="Save">
+                                    <i class="fas fa-bookmark"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="reel-container">
+                        <video src="https://www.frendzappliances.in/images/reels/reel%20(1).mp4" loop muted autoplay playsinline></video>
+                        <div class="reel-overlay">
+                            <h5 class="reel-title">Smart Toaster</h5>
+                            <p class="reel-description">Perfect toast every time</p>
+                            
+                            <div class="reel-stats">
+                                <div class="reel-stat">
+                                    <i class="fas fa-eye"></i>
+                                    <span>18.3K</span>
+                                </div>
+                                <div class="reel-stat">
+                                    <i class="fas fa-heart"></i>
+                                    <span>856</span>
+                                </div>
+                            </div>
+                            
+                            <div class="reel-actions">
+                                <button class="reel-action-btn" title="Like">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="reel-action-btn" title="Share">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                                <button class="reel-action-btn" title="Save">
+                                    <i class="fas fa-bookmark"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="reel-container">
+                        <video src="https://www.frendzappliances.in/images/reels/reel%20(1).mp4" loop muted autoplay playsinline></video>
+                        <div class="reel-overlay">
+                            <h5 class="reel-title">Air Fryer</h5>
+                            <p class="reel-description">Healthy cooking made easy</p>
+                            
+                            <div class="reel-stats">
+                                <div class="reel-stat">
+                                    <i class="fas fa-eye"></i>
+                                    <span>32.1K</span>
+                                </div>
+                                <div class="reel-stat">
+                                    <i class="fas fa-heart"></i>
+                                    <span>2.4K</span>
+                                </div>
+                            </div>
+                            
+                            <div class="reel-actions">
+                                <button class="reel-action-btn" title="Like">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="reel-action-btn" title="Share">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                                <button class="reel-action-btn" title="Save">
+                                    <i class="fas fa-bookmark"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="reel-container">
+                        <video src="https://www.frendzappliances.in/images/reels/reel%20(1).mp4" loop muted autoplay playsinline></video>
+                        <div class="reel-overlay">
+                            <h5 class="reel-title">Coffee Maker</h5>
+                            <p class="reel-description">Barista-quality coffee at home</p>
+                            
+                            <div class="reel-stats">
+                                <div class="reel-stat">
+                                    <i class="fas fa-eye"></i>
+                                    <span>15.7K</span>
+                                </div>
+                                <div class="reel-stat">
+                                    <i class="fas fa-heart"></i>
+                                    <span>723</span>
+                                </div>
+                            </div>
+                            
+                            <div class="reel-actions">
+                                <button class="reel-action-btn" title="Like">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="reel-action-btn" title="Share">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                                <button class="reel-action-btn" title="Save">
+                                    <i class="fas fa-bookmark"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Optional: View More Button -->
+            <div class="text-center mt-4">
+                <button class="btn btn-primary btn-lg">View More Reels</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Optional: Add your JavaScript for interaction -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click handlers for like buttons
+            document.querySelectorAll('.reel-action-btn .fa-heart').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const heart = this;
+                    heart.classList.toggle('fas');
+                    heart.classList.toggle('far');
+                    
+                    // Find the nearest stat counter and update it
+                    const statContainer = heart.closest('.reel-stat');
+                    if (statContainer) {
+                        const countElement = statContainer.querySelector('span');
+                        let count = parseInt(countElement.textContent.replace(/[^\d]/g, ''));
+                        if (heart.classList.contains('fas')) {
+                            count++;
+                        } else {
+                            count--;
+                        }
+                        countElement.textContent = count >= 1000 ? (count/1000).toFixed(1) + 'K' : count;
+                    }
+                });
+            });
+            
+            // Add share functionality
+            document.querySelectorAll('.reel-action-btn .fa-share-alt').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    alert('Share this product with your friends!');
+                    // In a real implementation, you would use the Web Share API or a social sharing library
+                });
+            });
+        });
+    </script>
+</body>
+</html>
